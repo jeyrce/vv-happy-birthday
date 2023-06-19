@@ -43,9 +43,7 @@ $('document').ready(function(){
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
 			$('.bannar').addClass('bannar-come');
-			// $('bannar_coming').fadeOut('slow').delay(3000).promise().done(function(){
 			$('#balloons_flying').fadeIn('slow');
-		// });
 		});
 	});
 
