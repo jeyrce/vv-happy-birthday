@@ -974,20 +974,20 @@ audio {
   transform: translate(0px, -500px);
 }
 .bannar-come {
-  -webkit-animation: bannar_come linear 6s;
+  -webkit-animation: bannar_come linear 2.5s;
   -webkit-transform: translate(0px, 0px);
-  -moz-animation: bannar_come linear 6s;
+  -moz-animation: bannar_come linear 2.5s;
   -moz-transform: translate(0px, 0px);
-  -o-animation: bannar_come linear 6s;
+  -o-animation: bannar_come linear 2.5s;
   -o-transform: translate(0px, 0px);
-  -ms-animation: bannar_come linear 6s;
+  -ms-animation: bannar_come linear 2.5s;
   -ms-transform: translate(0px, 0px);
-  animation: bannar_come linear 6s;
+  animation: bannar_come linear 2.5s;
   transform: translate(0px, 0px);
 }
 @-webkit-keyframes bannar_come {
   0% {
-    -webkit-transform: translate(0px, -1000px);
+    -webkit-transform: translate(0px, -200px);
   }
   33% {
     -webkit-transform: translate(0px, 0px);
@@ -1004,7 +1004,7 @@ audio {
 }
 @-moz-keyframes bannar_come {
   0% {
-    -moz-transform: translate(0px, -1000px);
+    -moz-transform: translate(0px, -200px);
   }
   33% {
     -moz-transform: translate(0px, 0px);
@@ -1021,7 +1021,7 @@ audio {
 }
 @-o-keyframes bannar_come {
   0% {
-    -o-transform: translate(0px, -1000px);
+    -o-transform: translate(0px, -200px);
   }
   33% {
     -o-transform: translate(0px, 0px);
@@ -1038,7 +1038,7 @@ audio {
 }
 @-ms-keyframes bannar_come {
   0% {
-    -ms-transform: translate(0px, -1000px);
+    -ms-transform: translate(0px, -200px);
   }
   33% {
     -ms-transform: translate(0px, 0px);
@@ -1055,7 +1055,7 @@ audio {
 }
 @keyframes bannar_come {
   0% {
-    transform: translate(0px, -1000px);
+    transform: translate(0px, -200px);
   }
   33% {
     transform: translate(0px, 0px);
