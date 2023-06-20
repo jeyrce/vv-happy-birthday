@@ -40,50 +40,58 @@ $('document').ready(function(){
 		$('body').css('backgroud-color','#FFF');
 		$('body').addClass('peach-after');
 		$(this).fadeOut('slow').delay(100).promise().done(function(){
-			// $('#bannar_coming').fadeIn('slow');
 			$('.bannar').addClass('bannar-come');
 			$('#balloons_flying').fadeIn('slow');
 		});
-		// $(this).fadeOut('slow').delay(3000).promise().done(function(){
-		// 	$('#balloons_flying').fadeIn('slow');
-		// });
 	});
 
-	// $('#bannar_coming').click(function(){
-	// 	$('.bannar').addClass('bannar-come');
-	//
-	// });
 
+	var maxW = document.body.scrollWidth;
 	function loopOne() {
 		var randleft = 1000*Math.random();
+		if(randleft > maxW) {
+			randleft = maxW - 100;
+		}
 		var randtop = 500*Math.random();
-		$('#b1').animate({left:randleft,bottom:randtop},10000,function(){
+		$('#b1').animate({left:0,bottom:randtop},10000,function(){
 			loopOne();
 		});
 	}
 	function loopTwo() {
 		var randleft = 1000*Math.random();
+		if(randleft > maxW) {
+			randleft = maxW - 100;
+		}
 		var randtop = 500*Math.random();
-		$('#b2').animate({left:randleft,bottom:randtop},10000,function(){
+		$('#b2').animate({left:100,bottom:randtop},10000,function(){
 			loopTwo();
 		});
 	}
 	function loopThree() {
 		var randleft = 1000*Math.random();
+		if(randleft > maxW) {
+			randleft = maxW - 100;
+		}
 		var randtop = 500*Math.random();
-		$('#b3').animate({left:randleft,bottom:randtop},10000,function(){
+		$('#b3').animate({left:50,bottom:randtop},10000,function(){
 			loopThree();
 		});
 	}
 	function loopFour() {
 		var randleft = 1000*Math.random();
+		if(randleft > maxW) {
+			randleft = maxW - 100;
+		}
 		var randtop = 500*Math.random();
-		$('#b4').animate({left:randleft,bottom:randtop},10000,function(){
+		$('#b4').animate({left:120,bottom:randtop},10000,function(){
 			loopFour();
 		});
 	}
 	function loopFive() {
 		var randleft = 1000*Math.random();
+		if(randleft > maxW) {
+			randleft = maxW - 100;
+		}
 		var randtop = 500*Math.random();
 		$('#b5').animate({left:randleft,bottom:randtop},10000,function(){
 			loopFive();
@@ -92,6 +100,9 @@ $('document').ready(function(){
 
 	function loopSix() {
 		var randleft = 1000*Math.random();
+		if(randleft > maxW) {
+			randleft = maxW - 100;
+		}
 		var randtop = 500*Math.random();
 		$('#b6').animate({left:randleft,bottom:randtop},10000,function(){
 			loopSix();
@@ -99,6 +110,9 @@ $('document').ready(function(){
 	}
 	function loopSeven() {
 		var randleft = 1000*Math.random();
+		if(randleft > maxW) {
+			randleft = maxW - 100;
+		}
 		var randtop = 500*Math.random();
 		$('#b7').animate({left:randleft,bottom:randtop},10000,function(){
 			loopSeven();
@@ -106,6 +120,9 @@ $('document').ready(function(){
 	}
 	function loopEight() {
 		var randleft = 1000*Math.random();
+		if(randleft > maxW) {
+			randleft = maxW - 100;
+		}
 		var randtop = 500*Math.random();
 		$('#b8').animate({left:randleft,bottom:randtop},10000,function(){
 			loopEight();
@@ -116,11 +133,6 @@ $('document').ready(function(){
 		$('.balloon-border').animate({top:-500},8000);
 		$('#b1,#b4,#b5,#b7').addClass('balloons-rotate-behaviour-one');
 		$('#b2,#b3,#b6,#b8').addClass('balloons-rotate-behaviour-two');
-		// $('#b3').addClass('balloons-rotate-behaviour-two');
-		// $('#b4').addClass('balloons-rotate-behaviour-one');
-		// $('#b5').addClass('balloons-rotate-behaviour-one');
-		// $('#b6').addClass('balloons-rotate-behaviour-two');
-		// $('#b7').addClass('balloons-rotate-behaviour-one');
 		loopOne();
 		loopTwo();
 		loopThree();
@@ -182,31 +194,28 @@ $('document').ready(function(){
 		$('.cake').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
 		});
-		
-		var i;
 
 		function msgLoop (i) {
-			$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
-			i=i+1;
-			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
-			if(i==50){
-				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
-					$('.cake').fadeIn('fast');
-				});
-				
-			}
-			else{
-				msgLoop(i);
-			}			
-
-			$(this).fadeOut('slow').delay(3000).promise().done(function(){
-			// $('#story').fadeIn('slow');
-		});
-		});
-			// body...
+				$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
+				i=i+1;
+				$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
+				if(i==50){
+					$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
+						$('.cake').fadeIn('fast');
+						loadFireWork();
+					});	
+				}
+				else{
+					msgLoop(i);
+				}			
+			});
 		}
 		
 		msgLoop(0);
+
+		function loadFireWork() {
+			window.location.href = '';
+		}
 		
 	});
 });

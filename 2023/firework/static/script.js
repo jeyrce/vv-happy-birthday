@@ -799,7 +799,7 @@ const shellNames = Object.keys(shellTypes);
 
 function init() {
     // Remove loading state
-    document.querySelector('.loading-init').remove();
+    // document.querySelector('.loading-init').remove();
     appNodes.stageContainer.classList.remove('remove');
 
     // Populate dropdowns
